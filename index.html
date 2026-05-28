@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chúc Mừng Sinh Nhật Bạn Yêu Dấu 💖</title>
+    
+    <!-- Google Fonts for premium typography -->
+    <link href="https://panbap.github.io/HeartBeat/textanim.html?id=eyJsaW5lMSI6IkNow7pjIG3hu6tuZyBzaW5oIG5o4bqtdCIsImxpbmUyIjoiQuG6oW4gZOG6pXUgecOqdSIsImhlYXJ0Ijoi8J%2BYmCIsIm11c2ljIjoiIn0%3D" rel="stylesheet">
+    
+    <link type="text/css" rel="stylesheet" href="./Chucmung8-3/asset/style.css">
+    
+    <style>
+        /* Modern Premium Styling Overrides */
+        body {
+            background: #ffe;
+            background: radial-gradient(circle, #fffaf0 0%, #ffeef5 100%);
+            font-family: 'Outfit', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow: hidden;
+        }
+
+        #tree-view {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: opacity 1.5s ease;
+        }
+
+        #text {
+            font-family: 'Outfit', sans-serif;
+            width: 450px;
+            height: 480px;
+            left: 50px;
+            top: 80px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+        #text::-webkit-scrollbar {
+            display: none;
+        }
+
+        #code {
+            font-size: 18px;
+            color: #333;
+            line-height: 1.8;
+        }
+
+        /* Glowing Button Styles */
+        .glowing-btn {
+            background: linear-gradient(45deg, #ff2e93, #ff8a00);
+            border: none;
+            color: white;
+            padding: 16px 36px;
+            font-size: 18px;
+            font-weight: 600;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 10px 25px rgba(255, 46, 147, 0.4);
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            outline: none;
+            font-family: 'Outfit', sans-serif;
+            margin-top: 15px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .glowing-btn:hover {
+            transform: scale(1.05) translateY(-2px);
+            box-shadow: 0 15px 35px rgba(255, 46, 147, 0.6), 0 5px 15px rgba(255, 138, 0, 0.4);
+        }
+
+        .glowing-btn:active {
+            transform: scale(0.98) translateY(1px);
+        }
+
+        /* Fullscreen Iframe for HeartBeat animation transition */
+        #heartbeat-frame {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            border: none;
+            z-index: 10000;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 1.5s ease;
+            background: #000;
+        }
+
+        /* Heart Beat pulsing effect for images */
+        .pulse-heart {
+            animation: pulse 1.2s infinite alternate;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.1); }
+        }
+    </style>
+
+    <script type="text/javascript" src="./Chucmung8-3/asset/jquery.min.js"></script>
+    <script type="text/javascript" src="./Chucmung8-3/asset/jscex.min.js"></script>
+    <script type="text/javascript" src="./Chucmung8-3/asset/jscex-parser.js"></script>
+    <script type="text/javascript" src="./Chucmung8-3/asset/jscex-jit.js"></script>
+    <script type="text/javascript" src="./Chucmung8-3/asset/jscex-builderbase.min.js"></script>
+    <script type="text/javascript" src="./Chucmung8-3/asset/jscex-async.min.js"></script>
+    <script type="text/javascript" src="./Chucmung8-3/asset/jscex-async-powerpack.min.js"></script>
+    <script type="text/javascript" src="./Chucmung8-3/asset/functions.js" charset="utf-8"></script>
+    <script type="text/javascript" src="./Chucmung8-3/asset/love.js" charset="utf-8"></script>
+</head>
+
+<body>
+    <!-- Intro Iframe (plays for 20 seconds, then fades out and is removed) -->
+    <iframe id="intro-frame" src="https://panbap.github.io/HeartBeat/textanim.html?id=eyJsaW5lMSI6IkNow7pjIG3hu6tuZyBzaW5oIG5o4bqtdCIsImxpbmUyIjoiQuG6oW4gecOqdSBk4bqldSIsImhlYXJ0Ijoi8J+YmCIsIm11c2ljIjoiIn0%3D" allow="autoplay" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; border: none; z-index: 999999; background: #000; transition: opacity 1.5s ease;"></iframe>
+
+    <!-- Main Tree View Container -->
+    <div id="tree-view">
+        <div id="wrap">
+            <div id="text">
+                <div id="code">
+                    <font color="#FF2E93">
+                        <span class="say" style="font-size: 28px; font-weight: 700; color: #ff2e93; text-shadow: 0 0 10px rgba(255,46,147,0.2);">Gửi Hồng Hoa ❤️</span><br><br>
+                        <span class="say" style="color: #444; font-weight: 500;">Haizz lại là Quỳnh Trang đây. Hai đứa dở hơi chúng mình quen được 13 năm rồi đấy. Ôi số to vl. Sắp tới chắc còn to nữa. Tự tin hỏi rằng có ai chơi được lâu như thế không. Chắc đéo có ai đâu. Làm gì có ai tính dở hơi thần kinh như hai đứa mình.</span><br><br>
+                        <span class="say" style="color: #555;">Mới quen nhau như nào ý nhỉ? T cũng đéo nhớ. Nhưng mà tao chỉ biết là tao chơi với mày từ lớp 1. Ôi nghĩ lại thì…. không nhớ rõ những cái kỉ niệm lắm nhưng mà lúc đó tao chỉ mong có bộ tóc dài như mày. Vì mẹ tao lúc nào cũng bắt tao cắt tóc ngắn như đàn ông.</span><br><br>
+                        <span class="say" style="color: #555;">Một tuần 7 ngày thì chắc 6 ngày tao hỏi mày là: “Làm thế nào tóc dài thế”. Câu trả lời luôn là: “Tao gội đầu nhiều”. Hài vl đéo hiểu sao tin được.</span><br><br>
+                        <span class="say" style="color: #555;">Sau đó là chuỗi ngày lên lớp cùng nhau. Học không giỏi lắm những mà mỗi năm lên lớp 1 lần. Thế éo nào học cùng nhau từ năm lớp 1 đến lớp 9. Lên đến cấp 3 không học cùng nhau nữa, 3 đứa mỗi đứa 1 nơi. Nhưng không sao mình đi học thêm cùng nhau mà. Từ lớp 10 đến lớp 12 ròng rã 3 năm trời.</span><br><br>
+                        <span class="say" style="color: #555;">Chưa đi học thì vui, chứ đi học rồi thì chán vl. Được cái bạn Hoa của tôi chán học là nghỉ, buồn là nghỉ, nóng nghỉ, mệt nghỉ, … lí do khác thì không rõ. Đi học thì nào có học hẳn hoi. Hai đứa bị cấm ngồi với học với nhau từ hồi cấp 1 là có lí do cả đấy. Tại ngồi với nhau là mồm hoạt động. Học 1 nhưng mà chuyện ngoài lề 10, kể chuyện trên trời dưới bể. Kiến thức thì không biết có được chữ nào không nhưng mà chuyện khác thì gì cũng biết. Này có được gọi là đôi bạn cùng lùi không ???</span><br><br>
+                        <span class="say" style="color: #555;">Đi học ban đêm thì vừa sợ vừa vui. Có những tối hai đứa 10 giờ vẫn đang trên đường cao tốc không 1 bóng người. Trời mùa hè thì nóng như thiêu, mùa đông thì lạnh hơn bắc cực.</span><br><br>
+                        <span class="say" style="color: #555;">Chuyện tình củm của bạn tôi thì cũng gọi là ấy đấy. Thích ai là người đấy dính drama. Không hiểu là không có duyên được yêu hay là thích chưa đúng đối tượng. À đm còn cái chuyện m để t đợi m hơi bị lâu mỗi lần đi chơi hay đi học đâu đấy nhá. Rất là bực, cuộc hẹn lúc 7:00 nhưng chắc là 7:00 mới bắt đầu chuẩn bị. Trời ơi đợi tận 15-20p, muốn tăng cmn xông.</span><br><br>
+                        <span class="say" style="color: #555;">Ôi dài thế kể đến kiếp sau không hết. Thôi thì ngày sinh nhật của Hoa, Trang chúc Hoa thành công với lựa chọn của mình sắp tới, tương lai kiếm thật nhiều tiền để cho tao vay, nâng cao tay nghề makeup với chụp ảnh để chụp ảnh cho tao nữa….. 💖</span><br><br>
+                        <span class="say" style="display: block; text-align: center; margin-top: 15px;">
+                            <img class="pulse-heart" width="80px" height="80px" src="Chucmung8-3/image/tym.png" alt="" style="filter: drop-shadow(0 0 8px rgba(255,46,147,0.4));">
+                        </span>
+                    </font>
+                    
+                    <div id="gift-btn-container" style="display: none; text-align: center; margin-top: 25px;">
+                        <button id="open-gift-btn" class="glowing-btn">
+                            Mở Quà Sinh Nhật 🎁
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <canvas id="canvas" width="1100" height="680"></canvas>
+        </div>
+    </div>
+
+    <!-- HeartBeat Iframe Container -->
+    <iframe id="heartbeat-frame" src="about:blank"></iframe>
+
+    <!-- Audio Player -->
+    <audio id="myAudio">
+        <source src="Chucmung8-3/music/happybirthday.mp3" type="audio/mp3" />
+    </audio>
+
+    <script>
+        (function () {
+            var canvas = $("#canvas");
+
+            if (!canvas[0].getContext) {
+                $("#error").show();
+                return false;
+            }
+
+            var width = canvas.width();
+            var height = canvas.height();
+            canvas.attr("width", width);
+            canvas.attr("height", height);
+            
+            var opts = {
+                seed: {
+                    x: width / 2 - 20,
+                    color: "rgb(190, 26, 37)",
+                    scale: 2,
+                },
+                branch: [
+                    [ 535, 680, 570, 250, 500, 200, 30, 100,
+                        [
+                            [ 540,500,455,417,340, 400, 13, 100,
+                                [[450, 435, 434, 430, 394, 395, 2, 40]],
+                            ],
+                            [ 550, 445, 600, 356, 680, 345, 12, 100,
+                                [[578, 400, 648, 409, 661, 426, 3, 80]],
+                            ],
+                            [539, 281, 537, 248, 534, 217, 3, 40],
+                            [ 546, 397, 413, 247, 328, 244, 9, 80,
+                                [
+                                    [427, 286, 383, 253, 371, 205, 2, 40],
+                                    [498, 345, 435, 315, 395, 330, 4, 60],
+                                ],
+                            ],
+                            [ 546, 357, 608, 252, 678, 221, 6, 100,
+                                [[590, 293, 646, 277, 648, 271, 2, 80]],
+                            ],
+                        ],
+                    ],
+                ],
+                bloom: {
+                    num: 700,
+                    width: 1080,
+                    height: 650,
+                },
+                footer: {
+                    width: 1200,
+                    height: 5,
+                    speed: 10,
+                },
+            };
+
+            var tree = new Tree(canvas[0], width, height, opts);
+            var seed = tree.seed;
+            var foot = tree.footer;
+            var hold = 1;
+
+            canvas.click(function (e) {
+                var offset = canvas.offset(), x, y;
+                x = e.pageX - offset.left;
+                y = e.pageY - offset.top;
+                if (seed.hover(x, y)) {
+                    hold = 0;
+                    canvas.unbind("click");
+                    canvas.unbind("mousemove");
+                    canvas.removeClass("hand");
+                    
+                    // Play audio on seed click
+                    var audio = document.getElementById("myAudio");
+                    if (audio) {
+                        audio.play().catch(function(err) {
+                            console.log("Autoplay was prevented, click again to play sound: ", err);
+                        });
+                    }
+                }
+            }).mousemove(function (e) {
+                var offset = canvas.offset(), x, y;
+                x = e.pageX - offset.left;
+                y = e.pageY - offset.top;
+                canvas.toggleClass("hand", seed.hover(x, y));
+            });
+
+            var seedAnimate = eval(
+                Jscex.compile("async", function () {
+                    seed.draw();
+                    while (hold) {
+                        $await(Jscex.Async.sleep(10));
+                    }
+                    while (seed.canScale()) {
+                        seed.scale(0.95);
+                        $await(Jscex.Async.sleep(10));
+                    }
+                    while (seed.canMove()) {
+                        seed.move(0, 2);
+                        foot.draw();
+                        $await(Jscex.Async.sleep(10));
+                    }
+                })
+            );
+
+            var growAnimate = eval(
+                Jscex.compile("async", function () {
+                    do {
+                        tree.grow();
+                        $await(Jscex.Async.sleep(10));
+                    } while (tree.canGrow());
+                })
+            );
+
+            var flowAnimate = eval(
+                Jscex.compile("async", function () {
+                    do {
+                        tree.flower(2);
+                        $await(Jscex.Async.sleep(10));
+                    } while (tree.canFlower());
+                })
+            );
+
+            var moveAnimate = eval(
+                Jscex.compile("async", function () {
+                    tree.snapshot("p1", 240, 0, 610, 680);
+                    while (tree.move("p1", 500, 0)) {
+                        foot.draw();
+                        $await(Jscex.Async.sleep(10));
+                    }
+                    foot.draw();
+                    tree.snapshot("p2", 500, 0, 610, 680);
+
+                    canvas.parent().css("background", "url(" + tree.toDataURL("image/png") + ")");
+                    canvas.css("background", "none");
+                    $await(Jscex.Async.sleep(300));
+                    canvas.css("background", "none");
+                })
+            );
+
+            var jumpAnimate = eval(
+                Jscex.compile("async", function () {
+                    var ctx = tree.ctx;
+                    while (true) {
+                        tree.ctx.clearRect(0, 0, width, height);
+                        tree.jump();
+                        foot.draw();
+                        $await(Jscex.Async.sleep(25));
+                    }
+                })
+            );
+
+            var textAnimate = eval(
+                Jscex.compile("async", function () {
+                    $("#code").show().typewriter();
+                })
+            );
+
+            var runAsync = eval(
+                Jscex.compile("async", function () {
+                    $await(seedAnimate());
+                    $await(growAnimate());
+                    $await(flowAnimate());
+                    $await(moveAnimate());
+
+                    textAnimate().start();
+
+                    $await(jumpAnimate());
+                })
+            );
+
+            runAsync().start();
+        })();
+
+        // Play audio on document click to bypass browser restrictions
+        var hasClicked = false;
+        document.addEventListener("click", function() {
+            if (!hasClicked) {
+                var audio = document.getElementById("myAudio");
+                if (audio) {
+                    audio.play().catch(function(e) { console.log(e); });
+                }
+                hasClicked = true;
+            }
+        });
+
+        // Sequence Event and Transition logic
+        $("#code").on("typewriterFinished", function() {
+            $("#gift-btn-container").fadeIn(1000);
+        });
+
+        $("#open-gift-btn").click(function() {
+            // Pause current audio
+            var audio = document.getElementById("myAudio");
+            if (audio) {
+                audio.pause();
+            }
+
+            // Create configuration for HeartBeat/littlelove.html dynamically
+            const config = {
+                line1: "Gửi Hồng Hoa 🌸",
+                line2: "Từ Quỳnh Trang 💖",
+                heart: "😘",
+                music: "a/3.mp3" // Play 3.mp3 love music
+            };
+            
+            const jsonStr = JSON.stringify(config);
+            const bytes = new TextEncoder().encode(jsonStr);
+            const base64Str = btoa(String.fromCharCode(...bytes));
+            const idParam = encodeURIComponent(base64Str);
+            
+            const iframeUrl = "HeartBeat/littlelove.html?id=" + idParam;
+
+            // Load iframe src and trigger fade transition
+            $("#heartbeat-frame").attr("src", iframeUrl);
+
+            $("#tree-view").css("opacity", "0");
+            setTimeout(function() {
+                $("#tree-view").hide();
+                $("#heartbeat-frame").css({
+                    "opacity": "1",
+                    "pointer-events": "auto"
+                });
+            }, 1500);
+        });
+
+        // Auto-remove Intro Iframe after 20 seconds
+        setTimeout(function() {
+            var introFrame = $("#intro-frame");
+            if (introFrame.length) {
+                introFrame.css("opacity", "0");
+                setTimeout(function() {
+                    introFrame.remove();
+                }, 1500); // Wait for fade out transition to complete
+            }
+        }, 20000);
+        </script>
+</body>
+</html>
